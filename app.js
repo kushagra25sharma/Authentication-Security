@@ -28,7 +28,7 @@ app.use(session({// initializing session
 app.use(passport.initialize());// sets up passport for us
 app.use(passport.session());// use passport to set up our session
 
-mongoose.connect("mongodb://localhost:27017/userDB", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env,CONNECTION_URL, {useNewUrlParser: true, useUnifiedTopology: true});
 
 mongoose.set("useCreateIndex", true); // to avoid deprecation warning
 
